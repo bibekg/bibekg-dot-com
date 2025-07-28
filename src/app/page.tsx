@@ -1,11 +1,12 @@
 "use client";
 
-import { Box, Heading, HStack, Icon, IconButton, Link, Text } from "@chakra-ui/react";
+import { Box, Heading, HStack, Link, Text } from "@chakra-ui/react";
+import { LuGithub, LuLinkedin } from "react-icons/lu";
+import Logo from "./components/Logo";
 import ProfilePic, { picturePositioningCalc } from "./components/ProfilePic";
-import { PROFILE_PIC_WIDTH } from "./constants";
-import { LuExternalLink, LuGithub, LuLinkedin } from "react-icons/lu";
 import ProjectReference from "./components/ProjectReference";
 import { TooltipIconButton } from "./components/TooltipIconButton";
+import { PROFILE_PIC_WIDTH } from "./constants";
 
 export default function Home() {
   return (
@@ -18,6 +19,17 @@ export default function Home() {
       overflow="hidden"
       position="relative"
     >
+      <Box
+        position="absolute"
+        top="20px"
+        left="20px"
+        alignItems="center"
+        justifyContent="flex-start"
+        display={{ base: "none", md: "block" }}
+      >
+        <Logo />
+      </Box>
+
       <Box
         position="absolute"
         top={`calc(-1 * ${picturePositioningCalc})`}
@@ -79,12 +91,7 @@ export default function Home() {
           <ProjectReference
             title="✏️ Emlog"
             url="https://emlog.substack.com/"
-            description={
-              <Box as="span">
-                I write here, along with my friend <Link href="https://matv.vercel.app/">Mat</Link>,
-                sometimes
-              </Box>
-            }
+            description={<Box as="span">I write here sometimes.</Box>}
           />
         </Box>
       </Box>
