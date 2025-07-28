@@ -1,95 +1,93 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+
+import { Box, Heading, HStack, Icon, IconButton, Link, Text } from "@chakra-ui/react";
+import ProfilePic, { picturePositioningCalc } from "./components/ProfilePic";
+import { PROFILE_PIC_WIDTH } from "./constants";
+import { LuExternalLink, LuGithub, LuLinkedin } from "react-icons/lu";
+import ProjectReference from "./components/ProjectReference";
+import { TooltipIconButton } from "./components/TooltipIconButton";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <Box
+      py={{ base: 10, md: 20 }}
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+      minHeight="100vh"
+      overflow="hidden"
+      position="relative"
+    >
+      <Box
+        position="absolute"
+        top={`calc(-1 * ${picturePositioningCalc})`}
+        right={`calc(-1 * ${picturePositioningCalc})`}
+        opacity={0.5}
+        display={{ base: "none", md: "block" }}
+      >
+        <ProfilePic />
+      </Box>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+      <Box
+        position="relative"
+        maxWidth="650px"
+        width="95%"
+        mb={5}
+        px={{ base: 2, md: 0 }}
+        mt={{
+          md: `calc(0.5 * calc(${PROFILE_PIC_WIDTH} - ${picturePositioningCalc}) - 100px);`,
+        }}
+      >
+        <HStack justifyContent="space-between" alignItems="center">
+          <Heading as="h1">👋🏽 Hey there!</Heading>
+          <HStack>
+            <TooltipIconButton
+              label="LinkedIn"
+              icon={LuLinkedin}
+              href="https://www.linkedin.com/in/bibekghimire/"
+              openInNewTab
             />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            <TooltipIconButton label="GitHub" icon={LuGithub} href="https://github.com/bibekg" />
+          </HStack>
+        </HStack>
+
+        <Box my={4}>
+          <Text>
+            My name is Bibek Ghimire. I’m a software engineer based in the San Francisco Bay Area.
+            I’m currently working on{" "}
+            <Link
+              href="https://newsletter.pragmaticengineer.com/i/140970283/trailhead"
+              target="_blank"
+            >
+              internal docs
+            </Link>{" "}
+            and AI tools at{" "}
+            <Link href="https://stripe.com" target="_blank">
+              Stripe
+            </Link>
+            .
+          </Text>
+        </Box>
+
+        <Box my={16}>
+          <ProjectReference
+            title="📍 Pinpoint"
+            url="https://playpinpoint.app"
+            description="A daily guessing game for places in your city (SF, NYC, LA, Philly)"
           />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+
+          <ProjectReference
+            title="✏️ Emlog"
+            url="https://emlog.substack.com/"
+            description={
+              <Box as="span">
+                I write here, along with my friend <Link href="https://matv.vercel.app/">Mat</Link>,
+                sometimes
+              </Box>
+            }
           />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </Box>
+      </Box>
+    </Box>
   );
 }

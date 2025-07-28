@@ -19,7 +19,6 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -39,4 +38,23 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+h1 {
+  font-size: var(--chakra-font-sizes-4xl);
+  color: var(--chakra-colors-primary);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: var(--chakra-font-sizes-3xl);
+}
+
+h3 {
+  font-size: var(--chakra-font-sizes-2xl);
+  color: var(--chakra-colors-primary);
+}
+
+p {
+  font-size: var(--chakra-font-sizes-xl);
 }
