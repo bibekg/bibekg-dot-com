@@ -1,5 +1,3 @@
-"use client";
-
 import { Box, Heading, HStack, Link, Text } from "@chakra-ui/react";
 import { LuGithub, LuLinkedin } from "react-icons/lu";
 import Logo from "./components/Logo";
@@ -42,7 +40,7 @@ export default function Home() {
 
       <Box
         position="relative"
-        maxWidth="650px"
+        maxWidth="55em"
         width="95%"
         mb={5}
         px={{ base: 2, md: 0 }}
@@ -55,25 +53,29 @@ export default function Home() {
           <HStack>
             <TooltipIconButton
               label="LinkedIn"
-              icon={LuLinkedin}
-              href="https://www.linkedin.com/in/bibekghimire/"
+              iconElement={<LuLinkedin />}
+              href="https://www.linkedin.com/in/bibekg/"
               openInNewTab
             />
-            <TooltipIconButton label="GitHub" icon={LuGithub} href="https://github.com/bibekg" />
+            <TooltipIconButton
+              label="GitHub"
+              iconElement={<LuGithub />}
+              href="https://github.com/bibekg"
+            />
           </HStack>
         </HStack>
 
         <Box my={4}>
           <Text>
-            My name is Bibek Ghimire. I’m a software engineer based in the San Francisco Bay Area.
-            I’m currently working on{" "}
+            {`My name is Bibek Ghimire. I’m a software engineer based in the San Francisco Bay Area.
+            I’m currently working on `}
             <Link
-              href="https://newsletter.pragmaticengineer.com/i/140970283/trailhead"
+              href="https://www.writethedocs.org/videos/portland/2024/sociological-considerations-in-designing-an-internal-documentation-platform-alistair-gray/"
               target="_blank"
             >
               internal docs
-            </Link>{" "}
-            and AI tools at{" "}
+            </Link>
+            {` and AI tools at `}
             <Link href="https://stripe.com" target="_blank">
               Stripe
             </Link>
@@ -94,6 +96,29 @@ export default function Home() {
             description={<Box as="span">I write here sometimes.</Box>}
           />
         </Box>
+
+        {/* Blog posts list */}
+        {/* {posts.length > 0 && (
+          <Box mt={20} width="100%">
+            <Heading as="h2" size="lg" mb={4}>
+              Writing
+            </Heading>
+            <VStack alignItems="flex-start" gap={2}>
+              {posts.map((post) => (
+                <Link key={post.href} href={post.href} fontWeight="medium">
+                  <Text color="primary" fontWeight="bold" fontSize="lg">
+                    {post.title}
+                  </Text>
+                  {post.date && (
+                    <Text as="span" color="gray.500" fontSize="sm" ml={2}>
+                      {new Date(post.date).toLocaleDateString()}
+                    </Text>
+                  )}
+                </Link>
+              ))}
+            </VStack>
+          </Box>
+        )} */}
       </Box>
     </Box>
   );
