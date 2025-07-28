@@ -44,21 +44,6 @@ p a {
   }
 }
 
-h1 {
-  font-size: var(--chakra-font-sizes-4xl);
-  color: var(--chakra-colors-primary);
-  font-weight: 700;
-}
-
-h2 {
-  font-size: var(--chakra-font-sizes-3xl);
-}
-
-h3 {
-  font-size: var(--chakra-font-sizes-2xl);
-  color: var(--chakra-colors-primary);
-}
-
 p {
-  font-size: var(--chakra-font-sizes-xl);
+  font-size: var(--chakra-font-sizes-lg);
 }

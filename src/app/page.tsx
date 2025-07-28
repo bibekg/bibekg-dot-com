@@ -1,4 +1,4 @@
-import { Box, Heading, HStack, Link, Text } from "@chakra-ui/react";
+import { Box, Heading, HStack, Link, Text, VStack } from "@chakra-ui/react";
 import { LuGithub, LuLinkedin } from "react-icons/lu";
 import Logo from "./components/Logo";
 import ProfilePic, { picturePositioningCalc } from "./components/ProfilePic";
@@ -49,7 +49,9 @@ export default function Home() {
         }}
       >
         <HStack justifyContent="space-between" alignItems="center">
-          <Heading as="h1">👋🏽 Hey there!</Heading>
+          <Heading as="h1" fontSize="4xl" fontWeight="bold" color="primary">
+            👋🏽 Hey there!
+          </Heading>
           <HStack>
             <TooltipIconButton
               label="LinkedIn"
@@ -83,18 +85,38 @@ export default function Home() {
           </Text>
         </Box>
 
-        <Box my={16}>
-          <ProjectReference
-            title="📍 Pinpoint"
-            url="https://playpinpoint.app"
-            description="A daily guessing game for places in your city (SF, NYC, LA, Philly)"
-          />
+        <Box my={8}>
+          <Heading as="h2" size="sm" mb={4} textTransform="uppercase" color="fg.muted">
+            🪴 hobbies & curiosities
+          </Heading>
 
-          <ProjectReference
-            title="✏️ Emlog"
-            url="https://emlog.substack.com/"
-            description={<Box as="span">I write here sometimes.</Box>}
-          />
+          <VStack gap={8} alignItems="flex-start">
+            <ProjectReference
+              title="📍 Pinpoint"
+              url="https://playpinpoint.app"
+              description="A daily guessing game for places in your city (SF, NYC, LA, Philly)."
+            />
+
+            <ProjectReference
+              title="🖊️ Imperfectionist"
+              url="https://imperfectionist.substack.com/"
+              description="I write here sometimes."
+            />
+
+            <ProjectReference
+              title="✏️ Emlog"
+              url="https://emlog.substack.com/"
+              description={
+                <Box as="span">
+                  I also write here sometimes, along with my friend{" "}
+                  <Link href="https://matv.vercel.app/" target="_blank">
+                    Mat
+                  </Link>
+                  .
+                </Box>
+              }
+            />
+          </VStack>
         </Box>
 
         {/* Blog posts list */}
