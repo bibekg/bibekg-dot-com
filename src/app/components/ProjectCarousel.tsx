@@ -40,7 +40,7 @@ const ProjectCarousel = () => {
   return (
     <Box
       display="grid"
-      gridTemplateColumns={{ _: "1fr", md: "repeat(2, 1fr)", xl: "repeat(3, 1fr)" }}
+      gridTemplateColumns={{ base: "1fr", md: "repeat(2, 1fr)", xl: "repeat(3, 1fr)" }}
       gridGap={3}
       my={3}
     >

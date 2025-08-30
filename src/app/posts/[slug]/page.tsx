@@ -4,11 +4,9 @@ import React from "react";
 import Markdoc from "@markdoc/markdoc";
 import matter from "gray-matter";
 
-interface PostPageProps {
-  params: {
-    slug: string;
-  };
-}
+type Props = {
+  params: Promise<{ slug: string }>;
+};
 
 const POSTS_DIR = path.join(process.cwd(), "src", "app", "posts");
 
@@ -19,8 +17,9 @@ export async function generateStaticParams() {
     .map((file) => ({ slug: file.replace(/\.md$/, "") }));
 }
 
-export default async function PostPage({ params }: PostPageProps) {
-  const filePath = path.join(POSTS_DIR, `${params.slug}.md`);
+export default async function PostPage({ params }: Props) {
+  const { slug } = await params;
+  const filePath = path.join(POSTS_DIR, `${slug}.md`);
 
   const raw = await fs.readFile(filePath, "utf8");
   const { content, data } = matter(raw);
