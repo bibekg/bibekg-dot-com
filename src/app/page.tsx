@@ -40,7 +40,7 @@ export default function Home() {
 
       <Box
         position="relative"
-        maxWidth="55em"
+        maxWidth="40em"
         width="95%"
         mb={5}
         px={{ base: 2, md: 0 }}
@@ -48,24 +48,9 @@ export default function Home() {
           md: `calc(0.5 * calc(${PROFILE_PIC_WIDTH} - ${picturePositioningCalc}) - 100px);`,
         }}
       >
-        <HStack justifyContent="space-between" alignItems="center">
-          <Heading as="h1" fontSize="4xl" fontWeight="bold" color="primary">
-            👋🏽 Hey there!
-          </Heading>
-          <HStack>
-            <TooltipIconButton
-              label="LinkedIn"
-              iconElement={<LuLinkedin />}
-              href="https://www.linkedin.com/in/bibekg/"
-              openInNewTab
-            />
-            <TooltipIconButton
-              label="GitHub"
-              iconElement={<LuGithub />}
-              href="https://github.com/bibekg"
-            />
-          </HStack>
-        </HStack>
+        <Heading as="h1" fontSize="4xl" fontWeight="bold" color="primary">
+          👋🏽 Hey there!
+        </Heading>
 
         <Box my={4}>
           <Text>
@@ -84,6 +69,20 @@ export default function Home() {
             .
           </Text>
         </Box>
+
+        <HStack>
+          <TooltipIconButton
+            label="LinkedIn"
+            iconElement={<LuLinkedin />}
+            href="https://www.linkedin.com/in/bibekg/"
+            openInNewTab
+          />
+          <TooltipIconButton
+            label="GitHub"
+            iconElement={<LuGithub />}
+            href="https://github.com/bibekg"
+          />
+        </HStack>
 
         <Box my={8}>
           <Heading as="h2" size="sm" mb={4} textTransform="uppercase" color="fg.muted">
