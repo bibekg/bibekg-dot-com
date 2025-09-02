@@ -5,11 +5,11 @@ description: As a UX-minded software engineer drawn to products that genuinely e
 
 ## 📱 Apps
 
-{% resource title="BeReal" url="https://emlog.substack.com/p/bereal" %}
-BeReal is one of the few social media apps that strikes the rare balance of helping me feel close to friends without hijacking my attention.
+{% resource title="BeReal" url="https://bereal.com" %}
+BeReal is one of the few social media apps that strikes the rare balance of helping me feel close to friends without hijacking my attention. [I love it so much I even wrote a blog post about it.](https://emlog.substack.com/p/bereal)
 {% /resource %}
 
-{% resource title="How We Feel" url="https://howwefeel.com" %}
+{% resource title="How We Feel" url="https://howwefeel.org" %}
 A emotions-driven journaling app with fantastic UX, thoughtful social features, and a tasteful LLM integration.
 
 In their words:

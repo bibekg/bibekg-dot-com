@@ -4,6 +4,7 @@ export function MarkdocLink({ href, children }: { href: string; children: React.
   return (
     <Link
       href={href}
+      display="inline"
       target="_blank"
       color="primary"
       transition="box-shadow 0.3s ease-in-out, color 0.3s ease-in-out"

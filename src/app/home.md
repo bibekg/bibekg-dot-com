@@ -9,15 +9,15 @@ I'm currently working on [internal docs](https://www.writethedocs.org/videos/por
 
 ## 🪴 HOBBIES & CREATIVITY
 
-{% resource title="📍 Pinpoint" url="https://playpinpoint.app" %}
+{% resource title="Pinpoint" url="https://playpinpoint.app" %}
 I made this daily guessing game for places in your city (SF, NYC, LA, Philly).
 {% /resource %}
 
-{% resource title="🖊️ Imperfectionist" url="https://imperfectionist.substack.com/" %}
+{% resource title="Imperfectionist" url="https://imperfectionist.substack.com/" %}
 I write here sometimes.
 {% /resource %}
 
-{% resource title="✏️ Emlog" url="https://emlog.substack.com/" %}
+{% resource title="Emlog" url="https://emlog.substack.com/" %}
 I also write here sometimes, along with my friend Mat.
 {% /resource %}
 {% /section %}
