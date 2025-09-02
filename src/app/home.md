@@ -1,6 +1,6 @@
 # 👋🏽 Hey there!
 
-My name is **Bibek Ghimire**. I'm a software engineer based in the San Francisco Bay Area.
+My name is **Bibek Ghimire**. I'm a software engineer based in the San Francisco Bay Area and a proud UCLA alum.
 I'm currently working on [internal docs](https://www.writethedocs.org/videos/portland/2024/sociological-considerations-in-designing-an-internal-documentation-platform-alistair-gray/) and AI tools at [Stripe](https://stripe.com).
 
 {% contact-links /%}
@@ -18,7 +18,7 @@ I write here sometimes.
 {% /resource %}
 
 {% resource title="Emlog" url="https://emlog.substack.com/" %}
-I also write here sometimes, along with my friend Mat.
+I also write here sometimes, along with my friend [Mat](https://varughese.github.io/).
 {% /resource %}
 {% /section %}
 
