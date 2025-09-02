@@ -1,6 +1,7 @@
 import { VStack } from "@chakra-ui/react";
 import { indexOfPagesIn } from "@/app/utils/indexOfPagesIn";
 import ResourceReference from "./ResourceReference";
+import { MarkdocParagraph } from "./MarkdocParagraph";
 
 export default function PagesIndex({ path }: { path: string }) {
   const items = indexOfPagesIn(path);
@@ -14,7 +15,7 @@ export default function PagesIndex({ path }: { path: string }) {
           key={item.href}
           title={item.title}
           url={item.href}
-          description={item.description}
+          description={item.description && <MarkdocParagraph>{item.description}</MarkdocParagraph>}
         />
       ))}
     </VStack>

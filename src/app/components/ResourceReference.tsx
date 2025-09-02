@@ -91,7 +91,7 @@ export default function ResourceReference({
         innerElement
       )}
 
-      {description && <Text>{description}</Text>}
+      {description}
     </VStack>
   );
 }

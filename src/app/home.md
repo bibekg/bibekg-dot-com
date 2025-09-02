@@ -26,5 +26,7 @@ I also write here sometimes, along with my friend Mat.
 
 ## 🗒️ LISTS
 
+I'm a curator at heart. For the longest time, these lists sat hidden in my Notion–I figured I might as well share them here.
+
 {% pages-index path="src/app/lists" /%}
 {% /section %}
