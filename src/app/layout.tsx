@@ -61,7 +61,11 @@ export default function RootLayout({
             --font-typewriter: ${typewriterFont.style.fontFamily};
         `}</style>
 
-        <script defer data-domain="bibekg.com" src="https://plausible.io/js/script.js"></script>
+        <script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon=' {"token": "42e216b9090ru59384ygu891dce9eecde", "spa": false} '
+        ></script>
       </head>
       <body className={FONTS.map((font) => font.variable).join(" ")}>
         <Provider>{children}</Provider>
