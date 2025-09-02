@@ -21,8 +21,6 @@ export function TooltipIconButton({
     size: "xs",
     p: 1,
     bg: "bg.muted",
-    // border: "1px solid",
-    // borderColor: "gray.200",
   };
 
   return (

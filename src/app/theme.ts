@@ -5,6 +5,7 @@ const config = defineConfig({
     tokens: {
       colors: {
         primary: { value: "#4650DF" },
+        secondary: { value: "#FA8072" },
       },
       fonts: {
         heading: { value: "var(--font-heading), serif" },

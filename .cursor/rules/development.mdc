@@ -1,0 +1,7 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+
+- Don't run `npm run build` - it messes up the dev server
