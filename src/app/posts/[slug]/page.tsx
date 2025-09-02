@@ -1,8 +1,8 @@
 import fs from "fs/promises";
 import path from "path";
 import React from "react";
-import Markdoc from "@markdoc/markdoc";
 import matter from "gray-matter";
+import { renderMarkdocToReact } from "@/app/utils/markdoc";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -24,9 +24,7 @@ export default async function PostPage({ params }: Props) {
   const raw = await fs.readFile(filePath, "utf8");
   const { content, data } = matter(raw);
 
-  const ast = Markdoc.parse(content);
-  const transformed = Markdoc.transform(ast);
-  const reactContent = Markdoc.renderers.react(transformed, React);
+  const reactContent = renderMarkdocToReact(content);
 
   return (
     <article style={{ maxWidth: 750, margin: "0 auto", padding: "2rem" }}>
