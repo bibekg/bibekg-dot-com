@@ -26,7 +26,5 @@ I also write here sometimes, along with my friend Mat.
 
 ## 🗒️ LISTS
 
-I'm a big fan of lists.
-
 {% pages-index path="src/app/lists" /%}
 {% /section %}
