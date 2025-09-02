@@ -60,6 +60,8 @@ export default function RootLayout({
             --font-monospace: ${monospaceFont.style.fontFamily};
             --font-typewriter: ${typewriterFont.style.fontFamily};
         `}</style>
+
+        <script defer data-domain="bibekg.com" src="https://plausible.io/js/script.js"></script>
       </head>
       <body className={FONTS.map((font) => font.variable).join(" ")}>
         <Provider>{children}</Provider>
