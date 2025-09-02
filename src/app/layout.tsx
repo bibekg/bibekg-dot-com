@@ -64,7 +64,7 @@ export default function RootLayout({
         <script
           defer
           src="https://static.cloudflareinsights.com/beacon.min.js"
-          data-cf-beacon=' {"token": "42e216b9090ru59384ygu891dce9eecde", "spa": false} '
+          data-cf-beacon='{"token": "426123c95d7b4bfdb235354fc4d8c063"}'
         ></script>
       </head>
       <body className={FONTS.map((font) => font.variable).join(" ")}>
