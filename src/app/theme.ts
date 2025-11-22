@@ -6,6 +6,8 @@ const config = defineConfig({
       colors: {
         primary: { value: "#4650DF" },
         secondary: { value: "#FA8072" },
+        backgroundLight: { value: "#FBF6F0" },
+        backgroundDark: { value: "#181818" },
       },
       fonts: {
         heading: { value: "var(--font-heading), serif" },

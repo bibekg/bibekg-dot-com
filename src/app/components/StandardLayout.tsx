@@ -23,6 +23,7 @@ export default function StandardLayout({ children, showProfilePic = false }: Sta
   return (
     <Box
       py={{ base: 10, md: 20 }}
+      bg={{ base: "backgroundLight", _dark: "backgroundDark" }}
       display="flex"
       flexDirection="column"
       alignItems="center"
