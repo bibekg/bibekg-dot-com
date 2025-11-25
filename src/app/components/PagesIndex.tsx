@@ -9,10 +9,10 @@ export default function PagesIndex({ path }: { path: string }) {
   if (!items.length) return null;
 
   return (
-    <VStack alignItems="flex-start">
+    <VStack alignItems="flex-start" gap={0}>
       {items.map((item) => (
         <ResourceReference
-          key={item.href}
+          key={item.href || item.title}
           title={item.title}
           url={item.href}
           description={item.description && <MarkdocParagraph>{item.description}</MarkdocParagraph>}

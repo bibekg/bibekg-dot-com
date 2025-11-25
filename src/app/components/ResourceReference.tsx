@@ -65,7 +65,7 @@ export default function ResourceReference({
   );
 
   return (
-    <VStack alignItems="flex-start" gap={0} my={2}>
+    <VStack alignItems="flex-start" gap={0} my={4}>
       {url ? (
         <Link
           maxW="fill"

@@ -46,7 +46,13 @@ const ProjectCarousel = () => {
     >
       {projects.map((item) => {
         return (
-          <Link key={item.name} href={item.link} position="relative" width="100%" pb="100%">
+          <Link
+            key={item.name || item.link}
+            href={item.link}
+            position="relative"
+            width="100%"
+            pb="100%"
+          >
             <Box
               position="absolute"
               top={0}
