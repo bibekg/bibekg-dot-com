@@ -47,3 +47,7 @@ p a {
 p {
   font-size: var(--chakra-font-sizes-lg);
 }
+
+em {
+  font-style: italic;
+}

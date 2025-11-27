@@ -23,10 +23,17 @@ function getMimeType(filePath: string): string {
   }
 }
 
-export async function GET(_req: Request, context: { params: { slug: string; asset?: string[] } }) {
+ export async function GET(_req: Request, context: { params: Record<string, string | string[]> }) {
   try {
-    const { slug } = context.params;
-    const segments = context.params.asset ?? [];
+    const slugParam = context.params.slug;
+    const assetParam = context.params.asset;
+
+    const slug = Array.isArray(slugParam) ? slugParam[0] : slugParam;
+    const segments = Array.isArray(assetParam)
+      ? assetParam
+      : typeof assetParam === "string"
+      ? [assetParam]
+      : [];
 
     // Normalize and protect against traversal
     const cleaned = segments.map((s) => decodeURIComponent(s)).filter(Boolean);

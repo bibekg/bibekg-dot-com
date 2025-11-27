@@ -7,22 +7,30 @@ I'm currently working on [internal docs](https://www.writethedocs.org/videos/por
 
 {% section %}
 
-## 🪴 HOBBIES & CREATIVITY
+## 🪴 Projects
 
 {% resource title="Pinpoint" url="https://playpinpoint.app" %}
-I made this daily guessing game for places in your city (SF, NYC, LA, Philly).
+I made this daily guessing game for places in your city (SF, NYC, LA, Philly). I also wrote [this blog post](https://imperfectionist.substack.com/p/how-i-built-pinpoint) about all the fun design challenges that it involved.
 {% /resource %}
-
-{% resource title="Imperfectionist" url="https://imperfectionist.substack.com/" %}
-I write here sometimes.
-{% /resource %}
-
-{% resource title="Emlog" url="https://emlog.substack.com/" %}
-I also write here sometimes, along with my friend [Mat](https://varughese.github.io/).
-{% /resource %}
-{% /section %}
 
 {% section %}
+
+{% section %}
+
+## 📝 WRITING
+
+A selection of essays from [Imperfectionist](https://imperfectionist.substack.com/), my personal blog, and [Emlog](https://emlog.substack.com/), a collaborative writing project with my friend [Mat](https://varughese.github.io/).
+
+{% resource hideUrl=true title="How I built Pinpoint: a daily mini-game for discovering your city" url="https://imperfectionist.substack.com/p/how-i-built-pinpoint" %}
+Built with Cursor as my sidekick, shaped by playful design puzzles, and fueled by my love for the hidden gems that give cities their character.
+{% /resource %}
+{% resource hideUrl=true title="AI could wipe out humanity and we should talk about it more" url="https://imperfectionist.substack.com/p/ai-could-wipe-out-humanityand-we" %}
+A book review on "If Anyone Builds It, Everyone Dies", catalog of my own research, and a healthy dose of existential dread
+{% /resource %}
+{% resource hideUrl=true title="A fully AI voice-dictated emlog" url="https://emlog.substack.com/p/a-fully-ai-voice-dictated-emlog" /%}
+{% resource hideUrl=true title="BeReal" url="https://emlog.substack.com/p/bereal" /%}
+
+{% /section %}
 
 ## 🗒️ LISTS
 

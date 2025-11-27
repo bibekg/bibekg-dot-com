@@ -22,15 +22,7 @@ export const MarkdocHeading: React.FC<MarkdocHeadingProps> = ({ level = 2, id, c
   }
   if (normalizedLevel === 2) {
     return (
-      <ChakraHeading
-        as="h2"
-        size="lg"
-        my={4}
-        mt={8}
-        textTransform="uppercase"
-        color="fg.muted"
-        id={id}
-      >
+      <ChakraHeading as="h2" size="xl" my={4} mt={8} textTransform="uppercase" color="fg" id={id}>
         {children}
       </ChakraHeading>
     );

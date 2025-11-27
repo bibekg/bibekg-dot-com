@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Flex, Heading, HStack, Icon, Image, Link, Text, VStack } from "@chakra-ui/react";
+import { Box, Heading, Icon, Image, Link, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 import { LuExternalLink } from "react-icons/lu";
 import { makeCleanUrl } from "../utils/makeCleanUrl";
@@ -22,46 +22,44 @@ export default function ResourceReference({
   const { src: faviconSrc, onError: onFaviconError } = useResourceFavicon(url);
 
   const innerElement = (
-    <Flex wrap="wrap" gap={2}>
-      <Heading as="h3" color="currentcolor" textOverflow="ellipsis" whiteSpace="nowrap">
-        <HStack gap={2} alignItems="center">
-          {!!faviconSrc && (
-            <Image
-              src={faviconSrc}
-              alt=""
-              boxSize="24px"
-              borderRadius="3px"
-              onError={onFaviconError}
-            />
-          )}
-          <Box as="span" textOverflow="ellipsis" whiteSpace="nowrap">
-            {title}
-          </Box>
-        </HStack>
+    <Box as="span" whiteSpace="normal">
+      {!!faviconSrc && (
+        <Image
+          src={faviconSrc}
+          alt=""
+          boxSize="24px"
+          borderRadius="3px"
+          onError={onFaviconError}
+          display="inline-block"
+          verticalAlign="text-bottom"
+        />
+      )}
+      <Heading as="h3" color="currentcolor" display="inline" ml={faviconSrc ? 2 : 0}>
+        {title}
       </Heading>
-      <HStack>
-        {url && (
-          <Text
-            className="url"
-            as="span"
-            color="fg.subtle"
-            fontFamily="monospace"
-            fontSize="sm"
-            css={{
-              transition: "color 0.3s ease-in-out",
-              ".resource-reference:hover &": {
-                color: "secondary/50",
-              },
-            }}
-          >
-            {makeCleanUrl(url)}
-          </Text>
-        )}
-        {openInNewTab && (
-          <Icon display="inline-block" color="fg.subtle" as={LuExternalLink} size="xs" />
-        )}
-      </HStack>
-    </Flex>
+
+      {url && (
+        <Text
+          className="url"
+          as="span"
+          color="fg.subtle"
+          fontFamily="monospace"
+          fontSize="sm"
+          ml={2}
+          css={{
+            transition: "color 0.3s ease-in-out",
+            ".resource-reference:hover &": {
+              color: "secondary/50",
+            },
+          }}
+        >
+          {makeCleanUrl(url)}
+        </Text>
+      )}
+      {openInNewTab && (
+        <Icon display="inline-block" color="fg.subtle" as={LuExternalLink} size="xs" ml={2} />
+      )}
+    </Box>
   );
 
   return (
@@ -91,7 +89,12 @@ export default function ResourceReference({
         innerElement
       )}
 
-      {description}
+      <Box
+        as="span"
+        css={{ "& > *:first-child": { marginTop: 1 }, "& > *:last-child": { marginBottom: 1 } }}
+      >
+        {description}
+      </Box>
     </VStack>
   );
 }
