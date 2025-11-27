@@ -25,7 +25,7 @@ A selection of essays from [Imperfectionist](https://imperfectionist.substack.co
 Built with Cursor as my sidekick, shaped by playful design puzzles, and fueled by my love for the hidden gems that give cities their character.
 {% /resource %}
 {% resource hideUrl=true title="AI could wipe out humanity and we should talk about it more" url="https://imperfectionist.substack.com/p/ai-could-wipe-out-humanityand-we" %}
-A book review on "If Anyone Builds It, Everyone Dies", catalog of my own research, and a healthy dose of existential dread
+A book review on "If Anyone Builds It, Everyone Dies", catalog of my own research, and a healthy dose of existential dread.
 {% /resource %}
 {% resource hideUrl=true title="A fully AI voice-dictated emlog" url="https://emlog.substack.com/p/a-fully-ai-voice-dictated-emlog" /%}
 {% resource hideUrl=true title="BeReal" url="https://emlog.substack.com/p/bereal" /%}

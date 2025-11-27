@@ -91,7 +91,10 @@ export default function ResourceReference({
 
       <Box
         as="span"
-        css={{ "& > *:first-child": { marginTop: 1 }, "& > *:last-child": { marginBottom: 1 } }}
+        css={{
+          "& > *:first-of-type(p, ul, ol)": { marginTop: 1 },
+          "& > *:last-of-type(p, ul, ol)": { marginBottom: 1 },
+        }}
       >
         {description}
       </Box>
