@@ -10,6 +10,8 @@ import ContactLinks from "../components/ContactLinks";
 import PagesIndex from "../components/PagesIndex";
 import Section from "../components/Section";
 import MarkdocQuote from "../components/MarkdocQuote";
+import { MarkdocList } from "../components/MarkdocList";
+import { MarkdocListItem } from "../components/MarkdocListItem";
 
 const linkConfig = {
   render: "Link",
@@ -91,6 +93,12 @@ export const markdocConfig: Config = {
     blockquote: {
       render: "Blockquote",
     },
+    list: {
+      render: "List",
+    },
+    item: {
+      render: "ListItem",
+    },
   },
 } as const;
 
@@ -108,6 +116,8 @@ export function renderMarkdocToReact(content: string): React.ReactNode {
       PagesIndex: PagesIndex,
       Section: Section,
       Quote: MarkdocQuote,
+      List: MarkdocList,
+      ListItem: MarkdocListItem,
     },
   });
 }

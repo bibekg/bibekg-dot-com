@@ -15,14 +15,22 @@ export const MarkdocHeading: React.FC<MarkdocHeadingProps> = ({ level = 2, id, c
 
   if (normalizedLevel === 1) {
     return (
-      <ChakraHeading as="h1" fontSize="4xl" fontWeight="bold" color="primary" id={id} mb={4}>
+      <ChakraHeading as="h1" fontSize="4xl" fontWeight="bold" color="primary" id={id} mb={4} mt={8}>
         {children}
       </ChakraHeading>
     );
   }
   if (normalizedLevel === 2) {
     return (
-      <ChakraHeading as="h2" size="lg" my={4} textTransform="uppercase" color="fg.muted" id={id}>
+      <ChakraHeading
+        as="h2"
+        size="lg"
+        my={4}
+        mt={8}
+        textTransform="uppercase"
+        color="fg.muted"
+        id={id}
+      >
         {children}
       </ChakraHeading>
     );
@@ -30,7 +38,7 @@ export const MarkdocHeading: React.FC<MarkdocHeadingProps> = ({ level = 2, id, c
 
   const asTag = `h${normalizedLevel}` as `h${typeof normalizedLevel}`;
   return (
-    <ChakraHeading as={asTag} id={id} fontSize="xl">
+    <ChakraHeading as={asTag} id={id} fontSize="xl" mt={8}>
       {children}
     </ChakraHeading>
   );
