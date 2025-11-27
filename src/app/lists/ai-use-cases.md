@@ -7,6 +7,6 @@ description: A list of uniquely great AI use cases that stand out above the rest
 This is one of those areas where a UX getting slightly more polished makes it categorically more useful. It accurately picking up what I say regardless of how well I enunciate creates a level of trust that fundamentally changes my relationship to computers by getting them more "out of the way" so to speak (pun intended). Reflected on this a bit [here](https://emlog.substack.com/p/a-fully-ai-voice-dictated-emlog).
 {% /resource %}
 
-{% resource title="Writing subtitles for blog posts" %}
-I already wrote the whole post, why should I have to write the subtitles too? ... Jokes aside, it's one of the few scenarios where the content I'm feeding the LLM is ~exactly the context it needs for the output I want. I also just find this a fun way to get the creative juices flowing for that fun final step of publishing something.
+{% resource title="New software project MVPs" %}
+AI's getting better and better at coding with every new model but it's still something that requires a lot of trial and error, good prompting, and knowledge of what it's good at and what it's not. Prototyping the MVP of a new project is one use case that [I've found it to be quite a productivity-booster for](https://imperfectionist.substack.com/i/179895912/cooking-with-cursor).
 {% /resource %}
